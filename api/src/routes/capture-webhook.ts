@@ -10,7 +10,7 @@ export const captureWebhook: FastifyPluginAsyncZod = async (app) => {
 			schema: {
 				summary: 'Capture incoming webhook requests',
 				tags: ['External'],
-        hide: true,
+				hide: true,
 				response: {
 					201: z.object({
 						id: z.uuidv7(),
