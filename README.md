@@ -2,29 +2,6 @@
 
 Monorepo para inspeção e captura de webhooks, permitindo visualizar, analisar e gerenciar requisições webhook de forma centralizada.
 
-## 📋 Pré-requisitos
-
-Antes de começar, certifique-se de ter instalado:
-
-- [Node.js](https://nodejs.org/) (versão 18 ou superior)
-- [pnpm](https://pnpm.io/) (gerenciador de pacotes)
-- [Docker](https://www.docker.com/) e [Docker Compose](https://docs.docker.com/compose/) (para o banco de dados)
-
-## 🏗️ Estrutura do Projeto
-
-```
-web-insp/
-├── api/              # Backend API (Fastify + Drizzle ORM)
-│   ├── src/
-│   │   ├── db/       # Configuração do banco e migrations
-│   │   └── routes/   # Rotas da API
-│   └── docker-compose.yml
-└── web/              # Frontend (React + Vite + TanStack Router)
-    └── src/
-        ├── components/
-        └── pages/
-```
-
 ## 🚀 Get Started
 
 ### 1. Dependências
@@ -72,10 +49,8 @@ Adicione as seguintes variáveis no arquivo `.env`:
 NODE_ENV=development
 PORT=3333
 DATABASE_URL=postgresql://docker:docker@localhost:5432/webhooks
-GOOGLE_GENERATIVE_AI_API_KEY=sua_chave_api_aqui
+GOOGLE_GENERATIVE_AI_API_KEY=key-ai-sdk
 ```
-
-> **Nota:** Substitua `sua_chave_api_aqui` pela sua chave real da API do Google Generative AI.
 
 ### 4. Migrations do Banco de Dados
 
